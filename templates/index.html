@@ -1,0 +1,30 @@
+
+    {% extends "template.html" %}
+    
+    {% block content %}
+    <div class="container">
+            <div id="particles-js"></div>
+        <form method="post" action="{{url_for('processResults')}}">
+            <div class="row _vertical-align text-center">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h1 class="main-title">Search</h1>
+                    <br>
+                    <input type="search" class="form-control" id="searchInputb" placeholder="Enter Query" style="text-align:center;" name="searchValue" required="true">
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+           
+            <button id="searchSubmitButton" type="submit" class="btn btn-dark">Search</button>
+            <div class="loader" id="loaderr"></div>
+             
+        </form>
+    </div>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}" ></script>
+    
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    {% endblock %}

@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+{% block content %}
+<nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="/" style="color:red">Go Back</a>
+
+</nav>
+ <div>
+       <h2 style="text-align:center">Sub-Reddit Recommendation for: "{{searchValue}}"</h2>
+ </div>
+ <div style="text-align:center">
+       <a href={{result[0]}} target="_blank">{{result[0]}}</a>
+ </div>
+
+ <div>
+       <h3 style="text-align:center">Other Recommendations:</h3>
+ </div>
+ 
+ <div style="text-align:center">
+       <a href={{result[1]}} target="_blank">{{result[1]}}</a><p><p>
+       <a href={{result[2]}} target="_blank">{{result[2]}}</a><p>
+       <a href={{result[3]}} target="_blank">{{result[3]}}</a><p>
+       <a href={{result[4]}} target="_blank">{{result[4]}}</a><p>
+       <a href={{result[5]}} target="_blank">{{result[5]}}</a><p>
+ </div>
+
+{% endblock %}
